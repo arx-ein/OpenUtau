@@ -170,8 +170,7 @@ namespace OpenUtau.App.Controls {
                 })
             });
             ViewModel.NoteBatchEdits.Add(new MenuItemViewModel() {
-                Header = "// Merge Notes",
-                //Header = ThemeManager.GetString("pianoroll.menu.notes.lengthencrossfade"),
+                Header = ThemeManager.GetString("pianoroll.menu.notes.merge"),
                 Command = ReactiveCommand.Create(() => {
                     ViewModel.NotesViewModel.MergeSelectedNotes();
                 })
