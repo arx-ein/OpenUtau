@@ -27,7 +27,8 @@ namespace OpenUtau.Core.Voicevox {
         public override float PortraitOpacity => voicebank.PortraitOpacity;
         public override int PortraitHeight => voicebank.PortraitHeight;
         public override int PortraitHeightCap => voicebank.PortraitHeightCap;
-        public override int PortraitPosition => voicebank.PortraitPosition;
+        public override int PortraitVertPosition => voicebank.PortraitVertPosition;
+        public override int PortraitHoriPosition => voicebank.PortraitHoriPosition;
         public override string Sample => voicebank.Sample == null ? null : Path.Combine(Location, voicebank.Sample);
         public override string DefaultPhonemizer => voicebank.DefaultPhonemizer;
         public override Encoding TextFileEncoding => voicebank.TextFileEncoding;

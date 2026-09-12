@@ -111,7 +111,8 @@ namespace OpenUtau.App.ViewModels {
         [Reactive] public partial bool UseTrackColor { get; set; }
         [Reactive] public partial bool ShowPortrait { get; set; }
         [Reactive] public partial int PortraitHeightCap { get; set; }
-        [Reactive] public partial int PortraitPosition { get; set; }
+        [Reactive] public partial int PortraitVertPosition { get; set; }
+        [Reactive] public partial int PortraitHoriPosition { get; set; }
         [Reactive] public partial float PortraitOpacity { get; set; }
         [Reactive] public partial bool ShowIcon { get; set; }
         [Reactive] public partial bool ShowGhostNotes { get; set; }
@@ -249,7 +250,8 @@ namespace OpenUtau.App.ViewModels {
             RememberVsqx = Preferences.Default.RememberVsqx;
             ClearCacheOnQuit = Preferences.Default.ClearCacheOnQuit;
             PortraitHeightCap = Preferences.Default.PortraitHeightCap;
-            PortraitPosition = Preferences.Default.PortraitPosition;
+            PortraitVertPosition = Preferences.Default.PortraitVertPosition;
+            PortraitHoriPosition = Preferences.Default.PortraitHoriPosition;
             PortraitOpacity = Preferences.Default.PortraitOpacity;
             Wayland = Preferences.Default.UseWayland;
 
@@ -362,9 +364,15 @@ namespace OpenUtau.App.ViewModels {
                     Preferences.Save();
                     MessageBus.Current.SendMessage(new PianorollRefreshEvent("PortraitHeight"));
                 });
-            this.WhenAnyValue(vm => vm.PortraitPosition)
+            this.WhenAnyValue(vm => vm.PortraitVertPosition)
                 .Subscribe(portraitPosition => {
-                    Preferences.Default.PortraitPosition = portraitPosition;
+                    Preferences.Default.PortraitVertPosition = portraitPosition;
+                    Preferences.Save();
+                    MessageBus.Current.SendMessage(new PianorollRefreshEvent("PortraitHeight"));
+                });
+            this.WhenAnyValue(vm => vm.PortraitHoriPosition)
+                .Subscribe(portraitPosition => {
+                    Preferences.Default.PortraitHoriPosition = portraitPosition;
                     Preferences.Save();
                     MessageBus.Current.SendMessage(new PianorollRefreshEvent("PortraitHeight"));
                 });

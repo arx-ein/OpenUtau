@@ -154,7 +154,8 @@
       <Canvas Grid.Row="3" Grid.RowSpan="3" Grid.Column="1"
               Bounds="{Binding NotesViewModel.PortraitCanvasBounds, Mode=OneWayToSource}">
         <Image HorizontalAlignment="Right" Source="{Binding NotesViewModel.Portrait}"
-               Canvas.Bottom="{Binding NotesViewModel.PortraitPosition}" Canvas.Right="100" 
+               Canvas.Bottom="{Binding NotesViewModel.PortraitVertPosition}"
+               Canvas.Left="{Binding NotesViewModel.PortraitHoriPosition}"
                Height="{Binding NotesViewModel.PortraitHeight}" OpacityMask="{Binding NotesViewModel.PortraitMask}"
                Stretch="Uniform"/>
       </Canvas>

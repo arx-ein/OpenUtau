@@ -233,7 +233,8 @@ namespace OpenUtau.Core.Ustx {
         public virtual float PortraitOpacity { get; }
         public virtual int PortraitHeight { get; }
         public virtual int PortraitHeightCap { get; }
-        public virtual int PortraitPosition { get; }
+        public virtual int PortraitVertPosition { get; }
+        public virtual int PortraitHoriPosition { get; }
         public virtual string Sample { get; }
         public virtual string DefaultPhonemizer { get; }
         public virtual Encoding TextFileEncoding => Encoding.UTF8;

@@ -14,7 +14,8 @@ namespace OpenUtau.Classic {
                 PortraitOpacity = 0.75f,
                 PortraitHeight = 675,
                 PortraitHeightCap = 80,
-                PortraitPosition = 30,
+                PortraitVertPosition = 30,
+                PortraitHoriPosition = 90,
                 Sample = "sample.wav",
                 SymbolSet = new SymbolSet() {
                     Preset = SymbolSetPreset.hiragana,
@@ -58,7 +59,8 @@ namespace OpenUtau.Classic {
             Assert.Equal(@"portrait_opacity: 0.75
 portrait_height: 675
 portrait_height_cap: 80
-portrait_position: 30
+portrait_vert_position: 30
+portrait_hori_position: 90
 sample: sample.wav
 symbol_set:
   preset: hiragana

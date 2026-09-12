@@ -45,7 +45,8 @@ namespace OpenUtau.Classic {
         public float PortraitOpacity = 0;
         public int PortraitHeight = 0;
         public int PortraitHeightCap = 0;
-        public int PortraitPosition = -1;
+        public int PortraitVertPosition = -1;
+        public int PortraitHoriPosition = -1;
         public string Author;
         public string Voice;
         public string Web;

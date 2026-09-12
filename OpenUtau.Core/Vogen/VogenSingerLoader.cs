@@ -21,7 +21,8 @@ namespace OpenUtau.Core.Vogen {
         public float portraitOpacity = 0;
         public int portraitHeight = 0;
         public int portraitHeightCap = 0;
-        public int portraitPosition = 0;
+        public int portraitVertPosition = 0;
+        public int portraitHoriPosition = 0;
         public string web;
         public string misc;
     }

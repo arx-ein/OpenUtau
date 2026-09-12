@@ -299,7 +299,8 @@ namespace OpenUtau.Core.Util {
                 """;
             public string RecoveryPath = string.Empty;
             public int PortraitHeightCap = 80;
-            public int PortraitPosition = 30;
+            public int PortraitVertPosition = 30;
+            public int PortraitHoriPosition = 90;
             public float PortraitOpacity = 0.67f;
             public bool DetachPianoRoll = true;
 
