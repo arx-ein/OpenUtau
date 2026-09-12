@@ -57,6 +57,8 @@ namespace OpenUtau.Classic {
             //"" evaluates to " in verbatim string literals
             Assert.Equal(@"portrait_opacity: 0.75
 portrait_height: 675
+portrait_height_cap: 80
+portrait_position: 30
 sample: sample.wav
 symbol_set:
   preset: hiragana
